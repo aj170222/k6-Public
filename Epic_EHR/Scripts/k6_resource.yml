@@ -8,11 +8,11 @@ spec:
   parallelism: 4
   script:
     configMap:
-      name: k6-test
-      file: test.js
+      name: k6-demo-configmap
+      file: multiple_requests.js
   separate: false
   runner:
-    image: <custom-image>
+    image: <grafana/k6:latest>
     metadata:
       labels:
         cool-label: foo
@@ -30,7 +30,7 @@ spec:
         cpu: 100m
         memory: 500Mi
   starter:
-    image: <custom-image>
+    image: <radial/busyboxplus:curl>
     metadata:
       labels:
         cool-label: foo
