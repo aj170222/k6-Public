@@ -10,4 +10,3 @@ spec:
     configMap:
       name: k6-demo-configmap
       file: multiple_requests.js
-  arguments: k6 run multiple_requests.js
