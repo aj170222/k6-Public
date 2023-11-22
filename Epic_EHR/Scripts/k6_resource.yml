@@ -1,9 +1,9 @@
 # k6-resource.yml
 
-apiVersion: v1
-kind: ConfigMap
+apiVersion: k6.io/v1alpha1
+kind: K6
 metadata:
-  name: k6-test
+  name: k6-sample
 spec:
   parallelism: 4
   script:
