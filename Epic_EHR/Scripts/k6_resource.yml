@@ -1,7 +1,7 @@
 # k6-resource.yml
 
 apiVersion: k6.io/v1alpha1
-kind: TestRun
+kind: K6
 metadata:
   name: k6-sample
 spec:
@@ -10,4 +10,3 @@ spec:
     configMap:
       name: k6-demo-configmap
       file: multiple_requests.js
-  arguments: k6 run multiple_requests.js
