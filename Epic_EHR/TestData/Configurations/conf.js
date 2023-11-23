@@ -1,8 +1,8 @@
 
 export const MULTIPLE_REQUESTS = {
-    vus: 1,
-    duration: "1m",
-    //iterations: 50,
+    vus: 10,
+    //duration: "1m",
+    iterations: 100,
   };
 
   
