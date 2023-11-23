@@ -9,4 +9,4 @@ spec:
   script:
     configMap:
       name: k6-demo-configmap
-      file: multiple_requests.js
+      file: complete_script.js
