@@ -4,8 +4,8 @@ import {check} from 'k6';
 //import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
-    vus: 5,
-    duration: "2s",
+    vus: 1000,
+    duration: "10m",
     //iterations: 50,
   };
 
@@ -78,7 +78,7 @@ const RESPONSES = http.batch([REQ1, REQ2, REQ3, REQ4, REQ5]);
 // export function handleSummary(data) {
 //   console.log("creating html report*****************")
 //   return {
-//     "MultiReq_SoakTestReportnew.html": htmlReport(data),
+//     "complete_Report.html": htmlReport(data),
 //   };
 
 // }
