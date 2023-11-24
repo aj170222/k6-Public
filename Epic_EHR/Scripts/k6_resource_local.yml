@@ -3,10 +3,9 @@
 apiVersion: k6.io/v1alpha1
 kind: K6
 metadata:
-  name: k6-sample
+  name: k6-sample-local
 spec:
   parallelism: 5
-  podName : k6-sample-local
   script:
     configMap:
       name: k6-demo-configmap-local
