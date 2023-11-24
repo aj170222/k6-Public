@@ -6,10 +6,11 @@ metadata:
   name: k6-sample-cloud
 spec:
   parallelism: 5
+  arguments: --out cloud
   script:
     configMap:
       name: k6-demo-configmap
       file: single_request_complete_script.js
-  arguments: --out cloud
+
 
       
