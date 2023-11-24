@@ -9,4 +9,6 @@ spec:
   script:
     configMap:
       name: k6-demo-configmap-local
-      file: ../Epic_EHR/Scripts/multiple_requests.js
+      file: multiple_requests.js
+
+
