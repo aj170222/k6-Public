@@ -4,8 +4,8 @@ import {check} from 'k6';
 //import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
-    vus: 5,
-    duration: "2s",
+    vus: 1000,
+    duration: "10m",
     //iterations: 50,
   };
 
