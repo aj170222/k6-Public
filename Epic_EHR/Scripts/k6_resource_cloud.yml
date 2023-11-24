@@ -1,0 +1,15 @@
+# k6-resource.yml
+
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: k6-sample
+spec:
+  parallelism: 5
+  script:
+    configMap:
+      name: k6-demo-configmap
+      file: multiple_requests_complete_script.js
+  arguments: --out cloud
+
+      
