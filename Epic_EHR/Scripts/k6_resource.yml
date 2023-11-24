@@ -10,3 +10,5 @@ spec:
     configMap:
       name: k6-demo-configmap
       file: complete_script.js
+
+      
