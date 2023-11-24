@@ -9,6 +9,6 @@ spec:
   script:
     configMap:
       name: k6-demo-configmap-local
-      file: complete_script.js
+      file: multiple_requests_complete_script.js
 
 
