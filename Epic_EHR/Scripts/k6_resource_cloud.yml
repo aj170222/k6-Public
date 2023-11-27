@@ -9,7 +9,7 @@ spec:
   arguments: --out cloud
   script:
     configMap:
-      name: k6-demo-configmap
+      name: k6-demo-configmap-cloud
       file: single_request_complete_script.js
 
 
