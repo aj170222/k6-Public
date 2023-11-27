@@ -8,7 +8,7 @@ spec:
   parallelism: 2
   script:
     configMap:
-      name: k6-demo-configmap_two_instance
+      name: k6-demo-configmap-two-instance
       file: single_request_complete_script.js
 
 
