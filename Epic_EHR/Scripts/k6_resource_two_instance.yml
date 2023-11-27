@@ -3,7 +3,7 @@
 apiVersion: k6.io/v1alpha1
 kind: K6
 metadata:
-  name: k6-sample-check_two-instance
+  name: k6-sample-check-two-instance
 spec:
   parallelism: 2
   script:
