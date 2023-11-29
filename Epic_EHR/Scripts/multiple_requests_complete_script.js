@@ -4,10 +4,16 @@ import {check} from 'k6';
 //import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
-    vus: 1000,
-    duration: "30m",
-    //iterations: 50,
-  };
+  discardResponseBodies: true,
+  scenarios: {
+    contacts: {
+      executor: 'per-vu-iterations',
+      vus: 500,
+      iterations: 20,
+      maxDuration: '20m',
+    },
+  },
+};
 
 export default function () {
 
@@ -15,7 +21,7 @@ export default function () {
 
     const HEADERS = {
         'Content-Type' : 'application/json',
-        'Authorization' : 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ1cm46b2lkOmZoaXIiLCJjbGllbnRfaWQiOiI3N2M1YWYwNy0yNzg1LTQzODMtOGU4Yi0yN2U2MTgzZWI0YzYiLCJlcGljLmVjaSI6InVybjplcGljOk9wZW4uRXBpYy1jdXJyZW50IiwiZXBpYy5tZXRhZGF0YSI6InZpTVUtOHY1UG5pQW1sNGcyQWc0aU5QdnRwS2d6QTh6SWpkUTJiMVJyZnZnbWdoYkJRTG56Y0ZWS195SlJDQkZSanhnOXRqTnFaWm1rNDBFVmZnbkNTamJaeFBud0NyeFJRWExKN1haNVVZcmVhVXJoQjlSSE1HWmEwVUEwTWo0IiwiZXBpYy50b2tlbnR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDEyNDk3MTYsImlhdCI6MTcwMTI0NjExNiwiaXNzIjoidXJuOm9pZDpmaGlyIiwianRpIjoiZTJmNjg2NDgtMzQ2My00Njk2LThmMjQtYTRjOWM0NmY2N2JkIiwibmJmIjoxNzAxMjQ2MTE2LCJzdWIiOiJlNmF3Ni1SSnVLTzJtYnFqbGVLdmdWUTMifQ.FzQDUOjKM9Jd2KgDz1LPMqb5zQ2S95XgoW5mokNGDGHYqRaarFv7eDMvJon7XtceYJDGa0LuEcooyJr9EN4rSAn-mrA_XRjor70mAe1BPgphVoh0zBwoasFIArFO77Nn9s2Sv3_DOYAPW5BGP5KuN1L--JPfRPBazKOTcQoYUyVfmHY3QjDUbWBrb6sWV0l9KF8j1i8-XSwa6XbEwqnCGj4--d-IMLDRBlv88P6H7IlrQXk0cQU020ApuxEntbFtM3dxPofr4zLVlUF3J3ha898oFD3YNYt0PM-SDr6sIAZRdOTHrj-dWJwMbPYyihVRtu_pKIaZ-cfhFvodMtVLyA'
+        'Authorization' : 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ1cm46b2lkOmZoaXIiLCJjbGllbnRfaWQiOiI3N2M1YWYwNy0yNzg1LTQzODMtOGU4Yi0yN2U2MTgzZWI0YzYiLCJlcGljLmVjaSI6InVybjplcGljOk9wZW4uRXBpYy1jdXJyZW50IiwiZXBpYy5tZXRhZGF0YSI6IlAtS0RicERZRDNvUTNHTkZzall4X0dRLTBqNmNOVk5WcE0yLTYyRjcwQTFlRVowSWM0aW9PUkFxdk9pSnI5RU9ScGg4RWIybnVqblNucXRRb25EOHM1TEdtbS1oUmVrOVEwNjZrYjlXa0VhMGdqZE03ZlZHSzM5eGhpdnRxdzdOIiwiZXBpYy50b2tlbnR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDEyNTU0OTMsImlhdCI6MTcwMTI1MTg5MywiaXNzIjoidXJuOm9pZDpmaGlyIiwianRpIjoiYzEyZGY3MzEtNDZkZS00OTE1LTk0ODktNjQ2YTdhNTFmNTQ2IiwibmJmIjoxNzAxMjUxODkzLCJzdWIiOiJlNmF3Ni1SSnVLTzJtYnFqbGVLdmdWUTMifQ.iwKMXj5kaRAOfb48RThJQBdwu469ANvCGlALz6BjekdBVZWdv451lW2YKtYkDMKKZFe6E82kq00S2lCoD2wSMAtVBX2kA53KVwBjUA9meGYUUg9EC3Mr2Zb_8Lh_ULrx00A7XNACzP1Ua2gMo-C9_JIImdLx2_UGOT7WB14YwHOs-su_INRQVXoH46kgXiqYrounsUYs1-m9kJ8DK9jIHYr2GA5s_YZAmnI0YpykaPmaUrp1skfgxAVn6826GMFAVXzGGI9bNGtu7mc_Mo7TQ-CvYqS9VXq-UI1bOQq48cqarJFlaEOZs6LMYxAOrTMDPA8rZgKULA97NgoBghry_w'
     }
   
     const REQ1 = {
@@ -78,7 +84,7 @@ const RESPONSES = http.batch([REQ1, REQ2, REQ3, REQ4, REQ5]);
 // export function handleSummary(data) {
 //   console.log("creating html report*****************")
 //   return {
-//     "complete_Report.html": htmlReport(data),
+//     "complete11_Report.html": htmlReport(data),
 //   };
 
 // }
