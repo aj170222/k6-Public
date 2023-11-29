@@ -5,7 +5,7 @@ import {check} from 'k6';
 
 export const options = {
     vus: 1000,
-    duration: "60m",
+    duration: "30m",
     //iterations: 50,
   };
 
@@ -15,7 +15,7 @@ export default function () {
 
     const HEADERS = {
         'Content-Type' : 'application/json',
-        'Authorization' : 'Bearer '
+        'Authorization' : 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ1cm46b2lkOmZoaXIiLCJjbGllbnRfaWQiOiI3N2M1YWYwNy0yNzg1LTQzODMtOGU4Yi0yN2U2MTgzZWI0YzYiLCJlcGljLmVjaSI6InVybjplcGljOk9wZW4uRXBpYy1jdXJyZW50IiwiZXBpYy5tZXRhZGF0YSI6InZpTVUtOHY1UG5pQW1sNGcyQWc0aU5QdnRwS2d6QTh6SWpkUTJiMVJyZnZnbWdoYkJRTG56Y0ZWS195SlJDQkZSanhnOXRqTnFaWm1rNDBFVmZnbkNTamJaeFBud0NyeFJRWExKN1haNVVZcmVhVXJoQjlSSE1HWmEwVUEwTWo0IiwiZXBpYy50b2tlbnR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDEyNDk3MTYsImlhdCI6MTcwMTI0NjExNiwiaXNzIjoidXJuOm9pZDpmaGlyIiwianRpIjoiZTJmNjg2NDgtMzQ2My00Njk2LThmMjQtYTRjOWM0NmY2N2JkIiwibmJmIjoxNzAxMjQ2MTE2LCJzdWIiOiJlNmF3Ni1SSnVLTzJtYnFqbGVLdmdWUTMifQ.FzQDUOjKM9Jd2KgDz1LPMqb5zQ2S95XgoW5mokNGDGHYqRaarFv7eDMvJon7XtceYJDGa0LuEcooyJr9EN4rSAn-mrA_XRjor70mAe1BPgphVoh0zBwoasFIArFO77Nn9s2Sv3_DOYAPW5BGP5KuN1L--JPfRPBazKOTcQoYUyVfmHY3QjDUbWBrb6sWV0l9KF8j1i8-XSwa6XbEwqnCGj4--d-IMLDRBlv88P6H7IlrQXk0cQU020ApuxEntbFtM3dxPofr4zLVlUF3J3ha898oFD3YNYt0PM-SDr6sIAZRdOTHrj-dWJwMbPYyihVRtu_pKIaZ-cfhFvodMtVLyA'
     }
   
     const REQ1 = {
