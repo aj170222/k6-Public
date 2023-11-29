@@ -8,9 +8,9 @@ export const options = {
   scenarios: {
     contacts: {
       executor: 'per-vu-iterations',
-      vus: 500,
-      iterations: 20,
-      maxDuration: '20m',
+      vus: 1000,
+      iterations: 2,
+      maxDuration: '15m',
     },
   },
 };
@@ -21,7 +21,7 @@ export default function () {
 
     const HEADERS = {
         'Content-Type' : 'application/json',
-        'Authorization' : 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ1cm46b2lkOmZoaXIiLCJjbGllbnRfaWQiOiI3N2M1YWYwNy0yNzg1LTQzODMtOGU4Yi0yN2U2MTgzZWI0YzYiLCJlcGljLmVjaSI6InVybjplcGljOk9wZW4uRXBpYy1jdXJyZW50IiwiZXBpYy5tZXRhZGF0YSI6IlAtS0RicERZRDNvUTNHTkZzall4X0dRLTBqNmNOVk5WcE0yLTYyRjcwQTFlRVowSWM0aW9PUkFxdk9pSnI5RU9ScGg4RWIybnVqblNucXRRb25EOHM1TEdtbS1oUmVrOVEwNjZrYjlXa0VhMGdqZE03ZlZHSzM5eGhpdnRxdzdOIiwiZXBpYy50b2tlbnR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDEyNTU0OTMsImlhdCI6MTcwMTI1MTg5MywiaXNzIjoidXJuOm9pZDpmaGlyIiwianRpIjoiYzEyZGY3MzEtNDZkZS00OTE1LTk0ODktNjQ2YTdhNTFmNTQ2IiwibmJmIjoxNzAxMjUxODkzLCJzdWIiOiJlNmF3Ni1SSnVLTzJtYnFqbGVLdmdWUTMifQ.iwKMXj5kaRAOfb48RThJQBdwu469ANvCGlALz6BjekdBVZWdv451lW2YKtYkDMKKZFe6E82kq00S2lCoD2wSMAtVBX2kA53KVwBjUA9meGYUUg9EC3Mr2Zb_8Lh_ULrx00A7XNACzP1Ua2gMo-C9_JIImdLx2_UGOT7WB14YwHOs-su_INRQVXoH46kgXiqYrounsUYs1-m9kJ8DK9jIHYr2GA5s_YZAmnI0YpykaPmaUrp1skfgxAVn6826GMFAVXzGGI9bNGtu7mc_Mo7TQ-CvYqS9VXq-UI1bOQq48cqarJFlaEOZs6LMYxAOrTMDPA8rZgKULA97NgoBghry_w'
+        'Authorization' : 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ1cm46b2lkOmZoaXIiLCJjbGllbnRfaWQiOiI3N2M1YWYwNy0yNzg1LTQzODMtOGU4Yi0yN2U2MTgzZWI0YzYiLCJlcGljLmVjaSI6InVybjplcGljOk9wZW4uRXBpYy1jdXJyZW50IiwiZXBpYy5tZXRhZGF0YSI6IkNZUzlnSGdNSFBhSG9UOUhyY2RmUTl0QWhQRjFKekRfWnVnZl9UNnhieG1yeXQ1X05tVnB0TE1vQW5xUlBhc1RYNF9MZ0pmdy1FcjZ6d1dQT1UwdDdmelAtZHVoa1RwdU1yeld3R2dpdEVWRHJyZUxCaE5JemNOeXhnNjdEdHVTIiwiZXBpYy50b2tlbnR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDEyNjUwOTMsImlhdCI6MTcwMTI2MTQ5MywiaXNzIjoidXJuOm9pZDpmaGlyIiwianRpIjoiODRhMDljZDEtYmUxOS00ODQxLWE0MTEtZThjY2E2OGZiOThkIiwibmJmIjoxNzAxMjYxNDkzLCJzdWIiOiJlNmF3Ni1SSnVLTzJtYnFqbGVLdmdWUTMifQ.T9e92GT5TEFGjQWbcKNWMND3zEItp7EEps51bN5H492dp9egUIl1OAC5JqbfTBgkWfcwpzpjRzJ5qP2oASAbO_vz6fhfYhThDf2V3CJA1xpb8o7SI4maVHR5cZ-DTTMBtC5G-LlTPUm9TPymSfX5uQU6i2C7q-zieeDyU0_wLAE0-C-4wBBNio1Es9_gYK7VA7qQEePHiOm-kBWdijhfzQvTPPhUFLBxfHiDWEfmtKyqi7A7wyRYaNB_EEYmqq2P7TPuaQHD1_kV7_-essVnhgJ-TSuIQ3U8ILFrWkYp-cRlfxrg69IaPKYVXy3X-Gc_7rakteHyHpVWuhTQdXJtvQ'
     }
   
     const REQ1 = {
