@@ -9,7 +9,7 @@ spec:
 minReplicas : 4
 maxReplicas : 6
 
-  targetCPUUtilizationPercentage: 70
+targetCPUUtilizationPercentage: 70
 
   script:
     configMap:
