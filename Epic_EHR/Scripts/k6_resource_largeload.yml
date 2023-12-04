@@ -1,0 +1,15 @@
+# k6-resource.yml
+
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: k6-sample-largeload
+spec:
+  parallelism: 4
+  script:
+    configMap:
+      name: k6-demo-configmap-largeload
+      file: multiple_requests_complete_script.js
+
+
+      
