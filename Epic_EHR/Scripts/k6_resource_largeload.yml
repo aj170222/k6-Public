@@ -6,8 +6,8 @@ metadata:
   name: k6-sample-largeload
 spec:
   parallelism: 4
-  minReplicas : 4
-  maxReplicas : 6
+minReplicas : 4
+maxReplicas : 6
 
   targetCPUUtilizationPercentage: 70
 
