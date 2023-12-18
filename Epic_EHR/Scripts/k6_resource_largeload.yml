@@ -5,11 +5,14 @@ kind: K6
 metadata:
   name: k6-sample-largeload
 spec:
-  parallelism: 10
+  parallelism: 6
   script:
     configMap:
       name: k6-demo-configmap-largeload
       file: multiple_requests_complete_script.js
+options:
+  machineType: E2_HIGHCPU_32
+  timeout: 30000s
 
 
       
