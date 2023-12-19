@@ -3,23 +3,23 @@ import {check} from 'k6';
 
 //import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
-export const options = {
-  discardResponseBodies: true,
-  scenarios: {
-    contacts: {
-      executor: 'per-vu-iterations',
-      vus: 100,
-      iterations: 100,
-      //maxDuration: '10m',
-    },
-  },
-};
-
 // export const options = {
+//   discardResponseBodies: true,
+//   scenarios: {
+//     contacts: {
+//       executor: 'per-vu-iterations',
 //       vus: 100,
-//       iterations: 10,
+//       iterations: 100,
 //       //maxDuration: '10m',
+//     },
+//   },
 // };
+
+export const options = {
+  vus: 1000,
+  //duration: "1s",
+  iterations: 1000,
+};
   
 export default function () {
 
