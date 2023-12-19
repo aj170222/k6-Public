@@ -17,8 +17,8 @@ import {check} from 'k6';
 
 export const options = {
   vus: 1000,
-  duration: "30m",
-  //iterations: 100,
+  //duration: "1s",
+  iterations: 1000,
 };
 
 export default function () {
