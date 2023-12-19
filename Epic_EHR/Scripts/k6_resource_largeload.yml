@@ -10,9 +10,6 @@ spec:
     configMap:
       name: k6-demo-configmap-largeload
       file: multiple_requests_complete_script.js
-  options:
-    machineType: E2_HIGHCPU_32
-  timeout: 30000s
 
 
       
