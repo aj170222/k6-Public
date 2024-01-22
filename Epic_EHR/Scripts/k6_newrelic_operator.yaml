@@ -1,0 +1,19 @@
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: k6-sample-newrelic
+spec:
+  runner:
+    env:
+    - name: K6_STATSD_ADDR
+      # name of the new relic statsD service exposed in cluster.
+      value: newrelic-statsd-svc:80
+  parallelism: 4
+  script:
+    configMap:
+      name: k6-demo-configmap-newrelic
+      file: multiple_requests_complete_script.js
+  separate: false
+  arguments: "--out statsd" 
+  scuttle:
+    enabled: "false"
