@@ -9,14 +9,14 @@ spec:
       # name of the new relic statsD service exposed in cluster.
       value: newrelic-statsd-svc:80
   parallelism: 4
-  # script:
-  #   configMap:
-  #     name: k6-demo-configmap-newrelic
-  #     file: multiple_requests_complete_script.js
-  script: 
-    volumeClaim:
-      name: newrelic-volumeclaim
+  script:
+    configMap:
+      name: k6-demo-configmap-newrelic
       file: multiple_requests_complete_script1.js
+  # script: 
+  #   volumeClaim:
+  #     name: newrelic-volumeclaim
+  #     file: multiple_requests_complete_script1.js
   separate: false
   arguments: "--out statsd" 
   scuttle:
