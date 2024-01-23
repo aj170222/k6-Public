@@ -1,7 +1,7 @@
 apiVersion: k6.io/v1alpha1
 kind: K6
 metadata:
-  name: k6-newrelic-sample
+  name: k6-newrelic-job
 spec:
   runner:
     env:
@@ -16,7 +16,7 @@ spec:
   script: 
     volumeClaim:
       name: newrelic-volumeclaim
-      file: multiple_requests_complete_script.js    
+      file: multiple_requests_complete_script1.js
   separate: false
   arguments: "--out statsd" 
   scuttle:
