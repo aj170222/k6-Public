@@ -15,7 +15,7 @@ spec:
   #     file: multiple_requests_complete_script.js
   script: 
     volumeClaim:
-      name: newrelic-claim
+      name: newrelic-volumeclaim
       file: multiple_requests_complete_script.js    
   separate: false
   arguments: "--out statsd" 
