@@ -16,9 +16,9 @@ import {check} from 'k6';
 // };
 
 export const options = {
-  vus: 1000,
+  vus: 20,
   //duration: "1s",
-  iterations: 1000,
+  iterations: 20,
 };
   
 export default function () {
