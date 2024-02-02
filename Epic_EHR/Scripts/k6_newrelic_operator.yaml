@@ -12,7 +12,7 @@ spec:
   script:
     configMap:
       name: k6-demo-configmap-newrelic
-      file: multiple_requests_complete_script1.js
+      file: single_request_complete_script.js
   # script: 
   #   volumeClaim:
   #     name: newrelic-volumeclaim
