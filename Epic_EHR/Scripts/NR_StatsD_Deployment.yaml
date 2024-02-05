@@ -29,8 +29,8 @@ spec:
             mountPath: /etc/opt/newrelic
         env:
         - name: NR_ACCOUNT_ID
-          value: "4186793"
+          value: "<enter your newrelic account id>"
         - name: NR_API_KEY
-          value: "d7080dcff62804a546c1260125818f777002NRAL"
+          value: "enter your newrelic api key"
         - name: NR_LOG_METRICS
           value: "true"
