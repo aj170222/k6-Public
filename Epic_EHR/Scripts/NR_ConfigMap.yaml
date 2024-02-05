@@ -14,7 +14,7 @@ data:
     flush-type = 'metrics'
     transport = 'default'
     # newrelic event address
-    address = "https://collector.newrelic.com/v1/accounts/4186793/events"
+    address = "https://collector.newrelic.com/v1/accounts/<enter your newrelic account id>/events"
     # newrelic metric api address
     address-metrics = "https://metric-api.newrelic.com/metric/v1"
-    api-key = 'd7080dcff62804a546c1260125818f777002NRAL'
+    api-key = 'enter your newrelic api key'
